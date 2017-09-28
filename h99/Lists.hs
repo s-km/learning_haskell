@@ -23,7 +23,7 @@ elementAt l k = last $ take k l
 -- Problem 4 (*)
 -- Find the number of elements of a list.
 myLength :: [a] -> Int
-myLength = foldl (\x _ -> x + 1) 0
+myLength = foldr (const (+1)) 0
 
 -- Problem 5 (*)
 -- Reverse a list.
